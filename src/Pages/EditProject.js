@@ -1,9 +1,8 @@
 import React from 'react'
 
-const EditProject = () => {
+export const EditProject = () => {
   return (
     <div>EditProject</div>
   )
 }
 
-export default EditProject

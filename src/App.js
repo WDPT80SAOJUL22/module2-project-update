@@ -1,9 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import EditProject from './pages/EditProject';
-import Home from './pages/Home';
-import NewProject from './pages/NewProject';
-import ProjectDetail from './pages/ProjectDetail';
+import {EditProject, Home, NewProject, ProjectDetail} from './pages'
 
  const App = () => {
   return (

@@ -1,9 +1,8 @@
 import React from 'react'
 
-const NewProject = () => {
+export const NewProject = () => {
   return (
     <div>NewProject</div>
   )
 }
 
-export default NewProject
