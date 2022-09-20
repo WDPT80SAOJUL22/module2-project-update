@@ -1,8 +1,5 @@
-import React from 'react'
+import React from 'react';
 
 export const NewProject = () => {
-  return (
-    <div>NewProject</div>
-  )
-}
-
+  return <div>NewProject</div>;
+};

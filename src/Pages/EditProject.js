@@ -1,8 +1,5 @@
-import React from 'react'
+import React from 'react';
 
 export const EditProject = () => {
-  return (
-    <div>EditProject</div>
-  )
-}
-
+  return <div>EditProject</div>;
+};
