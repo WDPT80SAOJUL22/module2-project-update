@@ -18,7 +18,7 @@ export const ProjectList = () => {
   return (
     <div>
       {projects.map((project) => (
-        <h1>{project.title}</h1>
+        <h1 key={project._id}>{project.title}</h1>
       ))}
     </div>
   );
