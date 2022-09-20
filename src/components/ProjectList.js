@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { ProjectCard } from './ProjectCard';
 
 export const ProjectList = () => {
   const [projects, setProjects] = useState([]);
@@ -18,7 +19,7 @@ export const ProjectList = () => {
   return (
     <div>
       {projects.map((project) => (
-        <h1 key={project._id}>{project.title}</h1>
+        <ProjectCard key={project._id} {...project} />
       ))}
     </div>
   );
