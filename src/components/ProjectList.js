@@ -17,7 +17,7 @@ export const ProjectList = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ marginTop: '10px' }}>
       {projects.map((project) => (
         <ProjectCard key={project._id} {...project} />
       ))}
