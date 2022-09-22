@@ -7,6 +7,7 @@ const Nav = styled.nav`
   display: flex;
   align-items: center;
   height: 50px;
+  margin-bottom: 10px;
 `;
 
 const Logo = styled.h1`
