@@ -9,6 +9,7 @@ const Data = styled.div`
   display: flex;
 `
 const Collum = styled.div`
+  border: ${(props) => props.border && '1px solid black'};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +31,7 @@ export const Project = ({
   handleAddComment,
 }) => {
   return (
-    <Collum>
+    <Collum border>
       <div>
         <Image
           src='https://www.pngfind.com/pngs/m/594-5947661_png-file-svg-project-icon-free-transparent-png.png'
