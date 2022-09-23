@@ -22,7 +22,13 @@ const Info = styled.div`
   align-items: flex-start;
 `
 
-export const Project = ({ title, description, created_at, students }) => {
+export const Project = ({
+  title,
+  description,
+  created_at,
+  students,
+  handleAddComment,
+}) => {
   return (
     <Collum>
       <div>
@@ -39,7 +45,7 @@ export const Project = ({ title, description, created_at, students }) => {
           <p>Students: {students}</p>
         </Info>
         <Collum>
-          <button>Add Comment</button>
+          <button onClick={handleAddComment}>Add Comment</button>
           <button>Edit</button>
           <button>Delete</button>
         </Collum>
