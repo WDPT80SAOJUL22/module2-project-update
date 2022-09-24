@@ -22,7 +22,7 @@ export const ProjectDetail = () => {
       .catch(() => navigate('/'))
 
     getComments(id).then((result) => setComments(result))
-  }, [])
+  }, [id, navigate])
 
   return (
     <>
