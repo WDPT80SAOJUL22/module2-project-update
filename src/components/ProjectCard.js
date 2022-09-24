@@ -1,25 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-
-const Card = styled(Link)`
-  display: flex;
-  text-decoration: none;
-  color: black;
-  justify-content: space-around;
-  width: 500px;
-  border: 1px solid black;
-  margin: 5px;
-`
-
-const Image = styled.img`
-  width: 50px;
-`
+import { Image, Card } from './commons'
 
 export const ProjectCard = ({ _id, title, created_at, students }) => {
   return (
     <Card to={`/project/${_id}`}>
       <Image
+        size={50}
         src='https://www.pngfind.com/pngs/m/594-5947661_png-file-svg-project-icon-free-transparent-png.png'
         alt='Project Image'
       />

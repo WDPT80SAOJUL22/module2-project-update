@@ -1,27 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
-
-const Image = styled.img`
-  width: 200px;
-`
-
-const Data = styled.div`
-  display: flex;
-`
-const Collum = styled.div`
-  border: ${(props) => props.border && '1px solid black'};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`
-
-const Info = styled.div`
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-`
+import { Collum, Data, Image, Info } from './commons'
 
 export const Project = ({
   title,
