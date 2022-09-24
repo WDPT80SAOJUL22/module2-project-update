@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Project } from '../components/Project'
 import { useNavigate, useParams } from 'react-router-dom'
 import { AddComment } from '../components/AddComment'
-import axios from 'axios'
+import { getProject, getComments } from '../utils/projectApi'
 
 export const ProjectDetail = () => {
   const [project, setProject] = useState({})
@@ -16,34 +16,12 @@ export const ProjectDetail = () => {
     setAddComment(!addComment)
   }
 
-  const getProject = async () => {
-    try {
-      const { data } = await axios.get(
-        `https://ironrest.herokuapp.com/WDPT80-projects/${id}`
-      )
-      setProject(data)
-    } catch (error) {
-      navigate('/')
-    }
-  }
-
-  const getComments = async () => {
-    try {
-      const { data } = await axios.get(
-        'https://ironrest.herokuapp.com/WDPT80-comments'
-      )
-      const filteredData = data.filter((comment) => comment.project_id === id)
-      setComments(filteredData)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  console.log(id)
-
   useEffect(() => {
-    getProject()
-    getComments()
+    getProject(id)
+      .then((result) => setProject(result))
+      .catch(() => navigate('/'))
+
+    getComments(id).then((result) => setComments(result))
   }, [])
 
   return (

@@ -1,20 +1,17 @@
-import axios from 'axios'
 import React, { useState } from 'react'
+import { createComment } from '../utils/projectApi'
 
 export const AddComment = ({ id, handleAddComment, getComments }) => {
   const [description, setDescription] = useState()
 
-  const createComment = async () => {
+  const handleClick = async () => {
     const newComment = {
       description,
       created_at: new Date().toLocaleDateString('pt-BR'),
       project_id: id,
     }
     try {
-      await axios.post(
-        'https://ironrest.herokuapp.com/WDPT80-comments',
-        newComment
-      )
+      await createComment(newComment)
       handleAddComment()
       getComments()
     } catch (error) {
@@ -28,7 +25,7 @@ export const AddComment = ({ id, handleAddComment, getComments }) => {
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <button onClick={createComment}>Send</button>
+      <button onClick={handleClick}>Send</button>
     </div>
   )
 }
