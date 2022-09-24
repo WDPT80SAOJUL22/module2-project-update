@@ -35,7 +35,7 @@ export const ProjectDetail = () => {
         />
       )}
       {comments.map((comment) => (
-        <div>
+        <div key={comment._id}>
           <p>{comment.created_at}</p>
           <p>{comment.description}</p>
         </div>
