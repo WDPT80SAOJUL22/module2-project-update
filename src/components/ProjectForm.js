@@ -43,7 +43,7 @@ export const ProjectForm = () => {
         />
       </div>
       <div>
-        <label>Description</label>
+        <label>Project Description</label>
         <textarea
           value={description}
           onChange={(e) => setDescription(e.target.value)}
